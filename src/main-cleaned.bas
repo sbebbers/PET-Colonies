@@ -1,4 +1,4 @@
-0 def fn l(i) = a%(y - i, x - i) + a%(y - i, x) + a%(y - i, x + i) + a%(y, x - i) + a%(y, x + i) + a%(y + i, x - i) + a%(y + i, x) + a%(y + o, x + o)
+0 def fn l(i) = a%(y - i, x - i) + a%(y - i, x) + a%(y - i, x + i) + a%(y, x - i) + a%(y, x + i) + a%(y + i, x - i) + a%(y + i, x) + a%(y + i, x + i)
 1 poke 53280, 0
 2 poke 53281, 0
 3 tr% = 23
@@ -13,11 +13,11 @@
 12 g% = .
 13 c1 = 2
 14 c2 = 3
-15 gosub 1000
+15 i = 0 : gosub 1000
 16 for y = . to tr%
 17 for x = . to tc%
-18 a%(y,x) = b%(y,x)
-19 if a%(y,x) = . then print " ";: goto 21
+18 a%(y, x) = b%(y, x)
+19 if a%(y, x) = . then print " ";: goto 21
 20 print "*";
 21 next x, y
 22 print "generation:"; g%; "{home}";: g%=g%+o
@@ -35,5 +35,5 @@
 1002 for y = sr% to er%
 1003 for x = sr% to ec%
 1004 b%(y, x) = rnd(.) + h
-1005 next x,y
+1005 next x, y
 1006 return
