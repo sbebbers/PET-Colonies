@@ -21,15 +21,14 @@
 20 if a%(y, x) = . then print " ";: goto 22
 21 print "*";
 22 next x, y
-23 print "generation:"; g%; "{home}";: g%=g%+o
+23 print "generation:"; g%; "{home}";: g% = g% + o
 24 for y = o to tr% - o
 25 for x = o to tc% - o
-26 c = .
-27 c = fn l(o)
-28 if a%(y, x) = o and c < c1 and c > c2 then b%(y,x)=.: goto 30
-29 if a%(y, x) = . and c = c2 then b%(y, x) = o
-30 next x,y
-31 if g% < 32768 then goto 17
+26 c = fn l(o)
+27 if a%(y, x) = o and c < c1 and c > c2 then b%(y, x) = .: goto 29
+28 if a%(y, x) = . and c = c2 then b%(y, x) = o
+29 next x,y
+30 if g% < 32768 then goto 17
 64 goto 64
 1000 print "{clear}{green}pet colonies, based upon space colony bytim hartnell circe 1983"
 1001 print "which was based upon conway's";chr$(13);"game of life{home}";
