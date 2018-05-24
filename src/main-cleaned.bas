@@ -1,4 +1,4 @@
-0 i = .
+0 i = . : poke 56334, peek(56334) and 254
 1 def fn l(i) = a%(y - i, x - i) + a%(y - i, x) + a%(y - i, x + i) + a%(y, x - i) + a%(y, x + i) + a%(y + i, x - i) + a%(y + i, x) + a%(y + i, x + i)
 2 poke 53280, i
 3 poke 53281, i
