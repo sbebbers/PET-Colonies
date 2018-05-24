@@ -1,4 +1,4 @@
-0 i = . : poke 56334, peek(56334) and 254
+0 i = .
 1 def fn l(i) = a%(y - i, x - i) + a%(y - i, x) + a%(y - i, x + i) + a%(y, x - i) + a%(y, x + i) + a%(y + i, x - i) + a%(y + i, x) + a%(y + i, x + i)
 2 poke 53280, i
 3 poke 53281, i
@@ -36,4 +36,5 @@
 1003 for x = sr% to ec%
 1004 b%(y, x) = rnd(.) + h
 1005 next x, y
-1006 return
+1006 poke 56334, peek(56334) and 254
+1007 return
