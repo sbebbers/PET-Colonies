@@ -25,7 +25,7 @@
 24 for y = o to tr% - o
 25 for x = o to tc% - o
 26 c = fn l(o)
-27 if a%(y, x) = o and c < c1 and c > c2 then b%(y, x) = .: goto 29
+27 if a%(y, x) = o and c <> c1 and c <> c2 then b%(y, x) = .: goto 29
 28 if a%(y, x) = . and c = c2 then b%(y, x) = o
 29 next x,y
 30 if g% < 32768 then goto 17
