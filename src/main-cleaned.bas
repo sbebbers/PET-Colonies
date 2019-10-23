@@ -31,12 +31,12 @@
 30    next x
 31 next y
 32 if g% < 32768 then go to 17
-64 goto 64
+64 go to 64
 1000 print "{clear}{green}pet colonies, based upon space colony bytim hartnell circe 1983"
 1001 print "which was based upon conway's";chr$(13);"game of life{home}";
 1002 for y = sr% to er%
 1003 for x = sr% to ec%
-1004 let b%(y, x) = rnd(.) + h
+1004 let b%(y, x) = rnd(0) + h
 1005 next x, y
 1006 poke 56334, peek(56334) and 254
 1007 return
