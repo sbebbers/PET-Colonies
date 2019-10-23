@@ -18,7 +18,7 @@
 17 for y = 0 to tr%
 18   for x = 0 to tc%
 19     let a%(y, x) = b%(y, x)
-20     if a%(y, x) then print "*";: go to 22
+20     if a%(y, x) then print "*";: goto 22
 21     print " ";
 22   next x
 23 next y
@@ -26,17 +26,19 @@
 25 for y = o to tr% - o
 26    for x = o to tc% - o
 27      let c = fn l(o)
-28      if a%(y, x) = o then if c <> c1 then if c <> c2 then let b%(y, x) = 0: go to 30
+28      if a%(y, x) = o then if c <> c1 then if c <> c2 then let b%(y, x) = 0: goto 30
 29      if a%(y, x) = 0 then if c = c2 then let b%(y, x) = o
 30    next x
 31 next y
-32 if g% < 32768 then go to 17
-64 go to 64
+32 if g% < 32767 then goto 17
+64 goto 64
 1000 print "{clear}{green}pet colonies, based upon space colony bytim hartnell circe 1983"
-1001 print "which was based upon conway's";chr$(13);"game of life{home}";
+1001 print "which was based upon conway's"; chr$(13); "game of life{home}";
 1002 for y = sr% to er%
-1003 for x = sr% to ec%
-1004 let b%(y, x) = rnd(0) + h
-1005 next x, y
-1006 poke 56334, peek(56334) and 254
-1007 return
+1003   for x = sr% to ec%
+1004     let b%(y, x) = rnd(0) + h
+1005   next x
+1006 next y
+1007 poke 56334, peek(56334) and 254
+1008 return
+9999 donkeysoft
