@@ -1,6 +1,6 @@
 # PET Colonies 64 for the Commodore 64/128 and compatibles
 
-This is based on "Stat Colony", by Tim Hartnell, originally published in "The Easy Way To Program Your New Computer [Works with all microcomputers]", published in 1984 by Interface Publications.
+This is based on "Star Colony", by Tim Hartnell, originally published in "The Easy Way To Program Your New Computer [Works with all microcomputers]", published in 1984 by Interface Publications.
 
 Star Colony is subsequently based on [John Conway's Game of Life](https://bitstorm.org/gameoflife/ "Game of Life")
 
