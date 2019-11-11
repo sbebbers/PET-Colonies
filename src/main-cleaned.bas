@@ -14,23 +14,25 @@
 13 let g% = 0
 14 let c1 = 2
 15 let c2 = 3
-16 gosub 1000
-17 for y = 0 to tr%
-18   for x = 0 to tc%
-19     let a%(y, x) = b%(y, x)
-20     if a%(y, x) then print "*";: goto 22
-21     print " ";
-22   next x
-23 next y
-24 print "generation:"; g%; "{home}";: let g% = g% + o
-25 for y = o to tr% - o
-26    for x = o to tc% - o
-27      let c = fn l(o)
-28      if a%(y, x) = o then if c <> c1 then if c <> c2 then let b%(y, x) = 0: goto 30
-29      if a%(y, x) = 0 then if c = c2 then let b%(y, x) = o
-30    next x
-31 next y
-32 if g% < 32767 then goto 17
+16 let a$ = "*"
+17 let s$ = " "
+18 gosub 1000
+19 for y = 0 to tr%
+20   for x = 0 to tc%
+21     let a%(y, x) = b%(y, x)
+22     if a%(y, x) then print a$;: goto 24
+23     print s$;
+24   next x
+25 next y
+26 print "generation:"; g%; "{home}";: let g% = g% + o
+27 for y = o to tr% - o
+28    for x = o to tc% - o
+29      let c = fn l(o)
+30      if a%(y, x) = o then if c <> c1 then if c <> c2 then let b%(y, x) = 0: goto 32
+31      if a%(y, x) = 0 then if c = c2 then let b%(y, x) = o
+32    next x
+33 next y
+34 if g% < 32767 then goto 17
 64 goto 64
 1000 print "{clear}{green}pet colonies, based upon space colony bytim hartnell circe 1983"
 1001 print "which was based upon conway's"; chr$(13); "game of life{home}";
