@@ -12,8 +12,8 @@
 11 let ec% = 36
 12 let c = 0
 13 let g% = 0
-14 c1 = 2
-15 c2 = 3
+14 let c1 = 2
+15 let c2 = 3
 16 gosub 1000
 17 for y = 0 to tr%
 18   for x = 0 to tc%
